@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>线上图书馆</title>
+	<link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="static/css/app.css">
+</head>
+<body>
+	<div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">线上图书馆</h1>
+          <select id="account" class="form-control">
+          	<option value="">请选择您的地址</option>
+          </select>
+          <hr/>
+          <div id="book-con"></div>
+          <hr/>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h2>借阅与归还记录</h2>
+          <div class="table-responsive">
+          <table id="book-record" class="table table-bordered">
+          	<thead>
+          		<tr>
+          			<th>用户</th>
+          			<th>类型</th>
+          			<th>书籍ID</th>
+          			<th>时间</th>
+          		</tr>
+          	</thead>
+          	<tbody>
+          	</tbody>
+          </table>
+          </div>
+       	</div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4 hide" id="book-tpl">
+        <div class="panel panel-default panel-book">
+          <div class="panel-heading">
+            <h3 class="panel-title"></h3>
+          </div>
+          <div class="panel-body">
+            <img class="img-rounded img-center img-book" src="">
+            <br>
+            <p><strong>ISBN</strong>: <span class="isbn"></span></p>
+            <p><strong>作者</strong>: <span class="author"></span></p>
+            <p><strong>出版日期</strong>: <span class="pubtime"></span></p>
+            <hr>
+            <button disabled="" class="btn btn-default btn-book btn-block" type="button" data-id=""><img src="static/images/loading.gif" alt=""></button>
+          </div>
+        </div>
+      </div>
+	<script src="static/js/jquery-1.11.3.min.js"></script>
+	<script src="static/js/web3.min.js"></script>
+	<script src="static/js/truffle-contract.js"></script>
+	<script src="static/js/app.js"></script>
+</body>
+</html>
